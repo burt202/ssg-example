@@ -1,0 +1,11 @@
+{% extends "./partials/wrapper.html" %}
+
+{% block content %}
+
+<div class="blurb">
+  {% raw %}{{ widget('content') }}{% endraw %}
+</div>
+
+{% raw %}{{ widget('image') }}{% endraw %}
+
+{% endblock %}

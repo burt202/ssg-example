@@ -1,0 +1,123 @@
+@charset "utf-8";
+
+/* CSS Default */
+
+html, body, div, span, object, iframe, h1, h2, h3, h4, h5, h6, p, a, table,
+tr, th, td, form, label, input, select, textarea, img, ul, ol, li, pre {
+  margin: 0;
+  padding: 0;
+  border: none;
+  outline: none;
+  font-family: kalinga, sans-serif;
+  font-size: 13px;
+}
+
+/* Misc */
+
+.clear {
+  float: none;
+  clear: both;
+  height: 0;
+  overflow: hidden;
+}
+
+/* Text HTML Overrides */
+
+body {
+  color: #000;
+  background: #FFF;
+}
+
+p {
+  margin: 6px 0;
+}
+
+/* Outer Containers */
+
+#main {
+  width: 930px;
+  margin: 0 auto;
+}
+
+.site-content {
+  width: 890px;
+  height: 560px;
+  margin: 0 auto;
+  background: #EEE;
+  padding: 20px;
+}
+
+/* Content */
+
+.site-banner {
+  width: 930px;
+  margin: 30px auto 0 auto;
+  height: 30px;
+}
+
+.site-name {
+  float: left;
+
+  a {
+    text-transform: uppercase;
+    text-decoration: none;
+    color: #888;
+    line-height: 30px;
+    font-size: 14px;
+
+    span {
+      color: #000;
+    }
+  }
+}
+
+.site-menu {
+  float: right;
+
+  ul {
+    list-style-type: none;
+    text-align: left;
+
+    li {
+      display: inline;
+      margin-right: 15px;
+
+      &:last-of-type {
+        margin-right: 0;
+      }
+
+      a {
+        height: 30px;
+        line-height: 30px;
+        color: #888;
+        text-decoration: none;
+        text-transform: uppercase;
+        font-size: 14px;
+
+        &:hover {
+          color: #222;
+        }
+
+        &.active {
+          color: #222;
+        }
+      }
+    }
+  }
+}
+
+.site-footer {
+  width: 930px;
+  margin: 0 auto;
+  text-align: right;
+  height: 25px;
+  line-height: 25px;
+}
+
+.site-link {
+  color: #003366;
+
+  &:hover {
+    color: #444;
+  }
+}
