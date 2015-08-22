@@ -13,7 +13,6 @@
     "ramda": "^0.17.1",
     "run-sequence": "^1.1.2",
     "style-loader": "^0.12.3",
-    "swig-loader": "^0.1.0",
     "swig-webpack-plugin": "^0.4.0",
     "webpack": "^1.11.0"
   }

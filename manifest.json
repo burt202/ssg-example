@@ -1,0 +1,33 @@
+{
+  "site": {
+    "metaData": ["metaDescription", "metaKeywords"]
+  },
+  "pages": {
+    "about": {
+      "metaData": ["pageTitle"],
+      "widgets": [
+        {
+          "type": "text",
+          "name": "content"
+        },
+        {
+          "type": "image",
+          "name": "image",
+          "fileType": "jpg",
+          "title": "About"
+        }
+      ]
+    },
+    "contact": {
+      "metaData": ["pageTitle"],
+      "widgets": [
+        {
+          "type": "image",
+          "name": "image",
+          "fileType": "jpg",
+          "title": "Contact"
+        }
+      ]
+    }
+  }
+}
