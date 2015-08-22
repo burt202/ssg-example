@@ -10,7 +10,7 @@ var webpackConfig = require("./webpack.config");
 var runSequence = require("run-sequence");
 var clean = require("gulp-clean");
 
-gulp.task("default", ["watch"]);
+gulp.task("default", ["build", "watch"]);
 
 gulp.task("watch", function () {
   gulp.watch("public/**", ["build"]);
@@ -33,7 +33,9 @@ gulp.task("clean", function () {
 
 gulp.task("copy-assets", function () {
   return gulp.src([
-      "public/assets/*"
+      "public/assets/*",
+      "node_modules/ionicons/fonts/ionicons.woff",
+      "node_modules/ionicons/fonts/ionicons.ttf",
     ])
     .pipe(gulp.dest("dist/assets"));
 });

@@ -1,0 +1,24 @@
+{% extends "./partials/layout.html" %}
+
+{% block content %}
+
+<div class="cols">
+
+  <div class="form">
+    <p>Feel free to contact me on <strong>contact@joe-bloggs.co.uk</strong> or alternatively use the form below.</p>
+
+    <div class="logos">
+      <ul>
+        <li><a class="ion ion-social-facebook external" href="http://www.facebook.com" title="Facebook"></a></li>
+        <li><a class="ion ion-social-twitter external" href="http://www.twitter.com" title="Twitter"></a></li>
+      <ul>
+    </div>
+  </div>
+
+  <div class="img">
+    {% raw %}{{ widget("image") }}{% endraw %}
+  </div>
+
+</div>
+
+{% endblock %}

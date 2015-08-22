@@ -14,5 +14,9 @@
     "run-sequence": "^1.1.2",
     "swig-webpack-plugin": "^0.4.0",
     "webpack": "^1.11.0"
+  },
+  "dependencies": {
+    "ionicons": "^2.0.1",
+    "jquery": "^2.1.4"
   }
 }
