@@ -6,4 +6,4 @@ An example static site that is ready to be consumed by my own static site genera
 
 - `npm i`
 - `gulp`
-- `http-server ./public/build/`
+- `http-server ./dist/`
