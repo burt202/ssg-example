@@ -1,5 +1,27 @@
 <!doctype html>
 <html lang="en">
-  <head></head>
-  <body></body>
+
+  <head>
+    <title>{% raw %}{{ pageTitle }}{% endraw %}</title>
+    <meta name="keywords" content="{% raw %}{{ metaKeywords }}{% endraw %}" />
+    <meta name="description" content="{% raw %}{{ metaDescription }}{% endraw %}" />
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+  </head>
+
+  <body class="{{ swigWebpackPlugin.options.pageName }}">
+
+    <div class="main">
+
+      {% include "./banner.html" %}
+
+      <div class="site-content">
+        {% block content %}{% endblock %}
+      </div>
+
+      {% include "./footer.html" %}
+    </div>
+
+    <script src="{{swigWebpackPlugin.options.pageName}}.js" type="text/javascript"></script>
+  </body>
+
 </html>

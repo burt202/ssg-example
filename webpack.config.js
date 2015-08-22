@@ -1,4 +1,6 @@
-var HtmlWebpackPlugin = require("html-webpack-plugin");
+var R = require("ramda");
+var SwigWebpackPlugin = require("swig-webpack-plugin");
+var aboutTemplateData = require("./public/templates/data/about.js");
 
 module.exports = {
   entry: {
@@ -16,9 +18,8 @@ module.exports = {
       }
     ]
   },
-  plugins: [new HtmlWebpackPlugin({
-    template: "./public/templates/partials/layout.html",
-    inject: "body",
-    filename: "about.html"
-  })]
+  plugins: [new SwigWebpackPlugin(R.merge({
+    template: "./public/templates/about.html",
+    filename: "about.html",
+  }, aboutTemplateData))]
 };
