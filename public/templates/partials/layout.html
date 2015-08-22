@@ -11,7 +11,7 @@
     <link rel="shortcut icon" href="assets/favicon.ico" />
   </head>
 
-  <body class="{{ swigWebpackPlugin.options.pageName }}">
+  <body class="{{ pageName }}">
 
     <div class="main">
 
@@ -24,8 +24,8 @@
       {% include "./footer.html" %}
     </div>
 
-    {% if swigWebpackPlugin.options.scripts %}
-      <script src="{{ swigWebpackPlugin.options.pageName }}.js" type="text/javascript"></script>
+    {% if scripts %}
+      <script src="{{ pageName }}.js" type="text/javascript"></script>
     {% endif %}
   </body>
 

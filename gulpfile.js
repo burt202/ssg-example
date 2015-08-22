@@ -9,6 +9,9 @@ var webpack = require("webpack");
 var webpackConfig = require("./webpack.config");
 var runSequence = require("run-sequence");
 var clean = require("gulp-clean");
+var swig = require("gulp-swig");
+var data = require("gulp-data");
+var path = require("path");
 
 gulp.task("default", ["build", "watch"]);
 
@@ -20,6 +23,8 @@ gulp.task("build", function (callback) {
   runSequence(
     "clean",
     "copy-assets",
+    "copy-manifest",
+    "compile-swig",
     "compile-less",
     "webpack",
     callback
@@ -38,6 +43,24 @@ gulp.task("copy-assets", function () {
       "node_modules/ionicons/fonts/ionicons.ttf",
     ])
     .pipe(gulp.dest("dist/assets"));
+});
+
+gulp.task("copy-manifest", function () {
+  return gulp.src([
+      "manifest.json",
+    ])
+    .pipe(gulp.dest("dist/"));
+});
+
+var getJsonData = function (file) {
+  return require("./public/templates/data/" + path.basename(file.path, ".html") + ".json");
+};
+
+gulp.task("compile-swig", function () {
+  return gulp.src("public/templates/*.html")
+    .pipe(data(getJsonData))
+    .pipe(swig())
+    .pipe(gulp.dest("dist/"));
 });
 
 gulp.task("compile-less", function () {

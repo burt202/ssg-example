@@ -6,13 +6,13 @@
 
   <div class="site-menu">
     <ul>
-      <li><a href="people.html" {% if swigWebpackPlugin.options.pageName === "people" %}class="active"{% endif %}>people</a></li>
-      <li><a href="action.html"  {% if swigWebpackPlugin.options.pageName === "action" %}class="active"{% endif %}>action</a></li>
-      <li><a href="travel.html" {% if swigWebpackPlugin.options.pageName === "travel" %}class="active"{% endif %}>travel</a></li>
-      <li><a href="commercial.html" {% if swigWebpackPlugin.options.pageName === "commercial" %}class="active"{% endif %}>commercial</a></li>
-      <li><a href="about.html" {% if swigWebpackPlugin.options.pageName === "about" %}class="active"{% endif %}>about</a></li>
-      <li><a href="contact.html" {% if swigWebpackPlugin.options.pageName === "contact" %}class="active"{% endif %}>contact</a></li>
-      <li><a href="blog.html" {% if swigWebpackPlugin.options.pageName === "blog" %}class="active"{% endif %}>blog</a></li>
+      <li><a href="people.html" {% if pageName === "people" %}class="active"{% endif %}>people</a></li>
+      <li><a href="action.html"  {% if pageName === "action" %}class="active"{% endif %}>action</a></li>
+      <li><a href="travel.html" {% if pageName === "travel" %}class="active"{% endif %}>travel</a></li>
+      <li><a href="commercial.html" {% if pageName === "commercial" %}class="active"{% endif %}>commercial</a></li>
+      <li><a href="about.html" {% if pageName === "about" %}class="active"{% endif %}>about</a></li>
+      <li><a href="contact.html" {% if pageName === "contact" %}class="active"{% endif %}>contact</a></li>
+      <li><a href="blog.html" {% if pageName === "blog" %}class="active"{% endif %}>blog</a></li>
     </ul>
   </div>
 
