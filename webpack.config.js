@@ -3,7 +3,7 @@ var R = require("ramda");
 var SwigWebpackPlugin = require("swig-webpack-plugin");
 var ExtractTextPlugin = require("extract-text-webpack-plugin");
 
-var aboutTemplateData = require("./public/templates/data/about.js");
+var aboutTemplateData = require("./public/templates/data/about");
 
 module.exports = {
   entry: {
