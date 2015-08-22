@@ -1,3 +1,4 @@
 module.exports = {
-  "pageName": "about"
+  "pageName": "about",
+  "scripts": false
 };
