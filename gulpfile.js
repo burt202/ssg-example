@@ -75,9 +75,9 @@ gulp.task("compile-less", function () {
     .pipe(gulp.dest("dist/"));
 });
 
-gulp.task("webpack", function(callback) {
-  webpack(Object.create(webpackConfig), function(err, stats) {
-    if(err) throw new gutil.PluginError("webpack", err);
+gulp.task("webpack", function (callback) {
+  webpack(Object.create(webpackConfig), function (err, stats) {
+    if (err) throw new gutil.PluginError("webpack", err);
     gutil.log("[webpack]", stats.toString());
     callback();
   });
