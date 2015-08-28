@@ -38,6 +38,36 @@
           "thumbnails": true
         }
       ]
+    },
+    "people": {
+      "metaData": ["pageTitle"],
+      "widgets": [
+        {
+          "type": "imageList",
+          "name": "imageList",
+          "thumbnails": true
+        }
+      ]
+    },
+    "travel": {
+      "metaData": ["pageTitle"],
+      "widgets": [
+        {
+          "type": "imageList",
+          "name": "imageList",
+          "thumbnails": true
+        }
+      ]
+    },
+    "commercial": {
+      "metaData": ["pageTitle"],
+      "widgets": [
+        {
+          "type": "imageList",
+          "name": "imageList",
+          "thumbnails": true
+        }
+      ]
     }
   }
 }
