@@ -1,5 +1,6 @@
 module.exports = {
   entry: {
+    index: "./public/js/index",
     contact: "./public/js/contact",
     action: "./public/js/action",
     people: "./public/js/people",

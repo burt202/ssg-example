@@ -3,6 +3,15 @@
     "metaData": ["metaDescription", "metaKeywords"]
   },
   "pages": {
+    "index": {
+      "metaData": ["pageTitle"],
+      "widgets": [
+        {
+          "type": "imageList",
+          "name": "imageList"
+        }
+      ]
+    },
     "about": {
       "metaData": ["pageTitle"],
       "widgets": [
