@@ -28,6 +28,16 @@
           "title": "Contact"
         }
       ]
+    },
+    "action": {
+      "metaData": ["pageTitle"],
+      "widgets": [
+        {
+          "type": "imageList",
+          "name": "imageList",
+          "thumbnails": true
+        }
+      ]
     }
   }
 }

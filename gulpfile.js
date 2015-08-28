@@ -41,6 +41,9 @@ gulp.task("copy-assets", function () {
       "public/assets/*",
       "node_modules/ionicons/fonts/ionicons.woff",
       "node_modules/ionicons/fonts/ionicons.ttf",
+      "node_modules/slick-carousel/slick/fonts/slick.woff",
+      "node_modules/slick-carousel/slick/fonts/slick.ttf",
+      "node_modules/slick-carousel/slick/ajax-loader.gif"
     ])
     .pipe(gulp.dest("dist/assets"));
 });
@@ -59,7 +62,7 @@ var getJsonData = function (file) {
 gulp.task("compile-swig", function () {
   return gulp.src("public/templates/*.html")
     .pipe(data(getJsonData))
-    .pipe(swig())
+    .pipe(swig({ defaults: { cache: false } }))
     .pipe(gulp.dest("dist/"));
 });
 

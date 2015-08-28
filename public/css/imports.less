@@ -3,4 +3,19 @@
 
 @import 'site.less';
 @import 'about.less';
+@import 'action.less';
 @import 'contact.less';
+
+@import (less) '../../node_modules/slick-carousel/slick/slick.css';
+@import (less) '../../node_modules/slick-carousel/slick/slick-theme.css';
+
+.slick-loading .slick-list {
+    background: #fff url('../assets/ajax-loader.gif') center center no-repeat;
+}
+
+@font-face {
+    font-family: 'slick';
+    font-weight: normal;
+    font-style: normal;
+    src: url('../assets/slick.woff') format('woff'), url('../assets/slick.ttf') format('truetype');
+}

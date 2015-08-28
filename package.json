@@ -17,6 +17,7 @@
   },
   "dependencies": {
     "ionicons": "^2.0.1",
-    "jquery": "^2.1.4"
+    "jquery": "^2.1.4",
+    "slick-carousel": "^1.5.8"
   }
 }
