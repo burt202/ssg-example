@@ -77,6 +77,17 @@
           "thumbnails": true
         }
       ]
+    },
+    "blog": {
+      "metaData": ["pageTitle"],
+      "widgets": [
+        {
+          "type": "blog",
+          "name": "blog",
+          "items": 5,
+          "archive": true
+        }
+      ]
     }
   }
 }
