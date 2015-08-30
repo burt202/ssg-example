@@ -21,9 +21,7 @@
         },
         {
           "type": "image",
-          "name": "image",
-          "fileType": "jpg",
-          "title": "About"
+          "name": "image"
         }
       ]
     },
@@ -32,9 +30,7 @@
       "widgets": [
         {
           "type": "image",
-          "name": "image",
-          "fileType": "jpg",
-          "title": "Contact"
+          "name": "image"
         }
       ]
     },
