@@ -1,3 +1,5 @@
+var CommonsChunkPlugin = require("webpack/lib/optimize/CommonsChunkPlugin");
+
 module.exports = {
   entry: {
     index: "./public/js/index",
@@ -10,5 +12,8 @@ module.exports = {
   output: {
     path: "./dist/",
     filename: "[name].js"
-  }
+  },
+  plugins: [
+    new CommonsChunkPlugin("common.js")
+  ]
 };

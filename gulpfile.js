@@ -13,20 +13,32 @@ var swig = require("gulp-swig");
 var data = require("gulp-data");
 var path = require("path");
 
-gulp.task("default", ["build", "watch"]);
+gulp.task("default", ["build:dev", "watch"]);
 
 gulp.task("watch", function () {
-  gulp.watch("public/**", ["build"]);
+  gulp.watch("public/**", ["build:dev"]);
 });
 
-gulp.task("build", function (callback) {
+gulp.task("build:dev", function (callback) {
   runSequence(
     "clean",
     "copy-assets",
     "copy-manifest",
     "compile-swig",
     "compile-less",
-    "webpack",
+    "webpack:dev",
+    callback
+  );
+});
+
+gulp.task("build:prod", function (callback) {
+  runSequence(
+    "clean",
+    "copy-assets",
+    "copy-manifest",
+    "compile-swig",
+    "compile-less",
+    "webpack:prod",
     callback
   );
 });
@@ -78,8 +90,22 @@ gulp.task("compile-less", function () {
     .pipe(gulp.dest("dist/"));
 });
 
-gulp.task("webpack", function (callback) {
+gulp.task("webpack:dev", function (callback) {
   webpack(Object.create(webpackConfig), function (err, stats) {
+    if (err) throw new gutil.PluginError("webpack", err);
+    gutil.log("[webpack]", stats.toString());
+    callback();
+  });
+});
+
+gulp.task("webpack:prod", function (callback) {
+  var config = Object.create(webpackConfig);
+
+  config.plugins = config.plugins.concat(
+    new webpack.optimize.UglifyJsPlugin()
+  );
+
+  webpack(config, function (err, stats) {
     if (err) throw new gutil.PluginError("webpack", err);
     gutil.log("[webpack]", stats.toString());
     callback();
