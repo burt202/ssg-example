@@ -80,6 +80,7 @@
         {
           "type": "blog",
           "name": "blog",
+          "dateFormat": "Do MMMM YYYY",
           "items": 5,
           "archive": true
         }
