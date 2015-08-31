@@ -12,6 +12,7 @@ var clean = require("gulp-clean");
 var swig = require("gulp-swig");
 var data = require("gulp-data");
 var path = require("path");
+var jshint = require("gulp-jshint");
 
 gulp.task("default", ["build:dev", "watch"]);
 
@@ -41,6 +42,14 @@ gulp.task("build:prod", function (callback) {
     "webpack:prod",
     callback
   );
+});
+
+gulp.task("jshint", function () {
+  return gulp.src([
+      "public/js/**/*js"
+    ])
+    .pipe(jshint(".jshintrc"))
+    .pipe(jshint.reporter("jshint-stylish"));
 });
 
 gulp.task("clean", function () {
