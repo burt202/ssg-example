@@ -3,6 +3,10 @@
 var $ = require("jquery");
 require("slick-carousel");
 
+$(".thumbnail-carousel").on("init", function () {
+  $(".thumbnail-carousel img").fadeIn(500);
+});
+
 $(".thumbnail-carousel").slick({
   infinite: true,
   slidesToShow: 6,
@@ -10,7 +14,11 @@ $(".thumbnail-carousel").slick({
 });
 
 $(".thumbnail-carousel img").click(function () {
-  $(".main-img").attr("src", $(this).data("hd"));
+  $(".main-img img").attr("src", $(this).data("hd"));
 });
 
-$(".main-img").attr("src", $(".thumbnail-carousel img").first().data("hd"));
+$(window).load(function () {
+  $(".main-img img")
+    .attr("src", $(".thumbnail-carousel img").first().data("hd"))
+    .fadeIn(500);
+});
