@@ -79,8 +79,7 @@
       "widgets": [
         {
           "type": "blog",
-          "name": "blog",
-          "archive": true
+          "name": "blog"
         }
       ]
     }

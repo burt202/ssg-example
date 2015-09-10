@@ -3,35 +3,39 @@
     height: auto;
   }
 
-  .blog-entries {
+  .blog-entry {
+    margin-bottom: 30px;
 
-    article {
-      margin-bottom: 30px;
+    header {
+      a {
+        font-size: 20px;
+        background: #000;
+        border-radius: 5px;
+        padding: 4px 8px;
+        display: table-cell;
+        color: #FFF;
+        text-decoration: none;
 
-      header {
-        h1 {
-          font-size: 20px;
-          background: #000;
-          border-radius: 5px;
-          padding: 4px 8px;
-          display: table-cell;
-          color: #FFF;
+        &:hover {
+          color: #CCC;
         }
+      }
 
-        p {
-          margin-top: 8px;
-          font-weight: bold;
-        }
+      p {
+        margin-top: 8px;
+        font-weight: bold;
       }
     }
 
-    a {
-      color: #003366;
-      cursor: pointer;
-      text-decoration: underline;
+    .content {
+      a {
+        color: #003366;
+        cursor: pointer;
+        text-decoration: underline;
 
-      &:hover {
-        color: #CC0000;
+        &:hover {
+          color: #CC0000;
+        }
       }
     }
   }

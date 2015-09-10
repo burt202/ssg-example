@@ -3,4 +3,4 @@
 require("./site");
 var $ = require("jquery");
 
-$(".blog-entries article a").addClass("external");
+$("article.blog-entry .content a").addClass("external");
