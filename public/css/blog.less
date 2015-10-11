@@ -26,16 +26,17 @@
         font-weight: bold;
       }
     }
+  }
 
-    .content {
-      a {
-        color: #003366;
-        cursor: pointer;
-        text-decoration: underline;
+  .next-prev-links {
+    list-style: none;
+    display: flex;
 
-        &:hover {
-          color: #CC0000;
-        }
+    li {
+      &:last-of-type:not(:first-of-type) {
+        margin-left: 10px;
+        border-left: 1px solid #000;
+        padding-left: 10px;
       }
     }
   }
