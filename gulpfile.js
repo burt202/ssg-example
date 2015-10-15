@@ -13,6 +13,7 @@ var swig = require("gulp-swig");
 var data = require("gulp-data");
 var path = require("path");
 var jshint = require("gulp-jshint");
+var htmlreplace = require("gulp-html-replace");
 
 gulp.task("default", ["build:dev", "watch"]);
 
@@ -38,10 +39,19 @@ gulp.task("build:prod", function (callback) {
     "copy-assets",
     "copy-manifest",
     "compile-swig",
+    "remove-test-content",
     "compile-less",
     "webpack:prod",
     callback
   );
+});
+
+gulp.task("remove-test-content", function () {
+  return gulp.src("dist/*.html")
+    .pipe(htmlreplace({
+      "test-content": ""
+    }))
+    .pipe(gulp.dest("dist"));
 });
 
 gulp.task("jshint", function () {
