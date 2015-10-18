@@ -14,6 +14,7 @@ var data = require("gulp-data");
 var path = require("path");
 var jshint = require("gulp-jshint");
 var htmlreplace = require("gulp-html-replace");
+var zip = require("gulp-zip");
 
 gulp.task("default", ["build:dev", "watch"]);
 
@@ -42,8 +43,15 @@ gulp.task("build:prod", function (callback) {
     "remove-test-content",
     "compile-less",
     "webpack:prod",
+    "zip-dist",
     callback
   );
+});
+
+gulp.task("zip-dist", function () {
+  return gulp.src("**/*", {cwd: __dirname + "/dist"})
+    .pipe(zip("scaffolding.zip"))
+    .pipe(gulp.dest("dist"));
 });
 
 gulp.task("remove-test-content", function () {
