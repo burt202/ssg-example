@@ -3,89 +3,88 @@
     height: auto;
   }
 
-  .blog-container {
+  .ssg-blog-widget {
     display: flex;
-  }
+    flex-flow: row wrap;
 
-  .blog-entries {
-    flex-basis: 0;
-    flex-grow: 4;
-    max-width: 675px;
-  }
+    &__entries {
+      flex: 3 100%;
+      order: 2;
+      max-width: 675px;
+    }
 
-  .blog-entry {
-    margin-bottom: 30px;
+    &__entry {
+      margin-bottom: 30px;
+    }
 
-    header {
-      a {
-        font-size: 20px;
-        background: #000;
-        border-radius: 5px;
-        padding: 4px 8px;
-        display: table-cell;
-        color: #FFF;
-        text-decoration: none;
+    &__entry-link {
+      font-size: 20px;
+      background: #000;
+      border-radius: 5px;
+      padding: 4px 8px;
+      display: table-cell;
+      color: #FFF;
+      text-decoration: none;
 
-        &:hover {
-          color: #CCC;
-        }
-      }
-
-      p {
-        margin-top: 8px;
-        font-weight: bold;
+      &:hover {
+        color: #CCC;
       }
     }
 
-    .content {
+    &__entry-date {
+      margin-top: 8px;
+      font-weight: bold;
+    }
+
+    &__entry-content {
       a:extend(.site-link all) {}
 
       img {
         width: 675px;
       }
     }
-  }
 
-  .sidebar {
-    order: -1;
-    flex-basis: 0;
-    flex-grow: 1;
+    &__sidebar {
+      flex: 1 auto;
+      order: 1;
+    }
 
-    .recent-posts,
-    .archive {
+    &__sidebar-item--recent-entries,
+    &__sidebar-item--archive {
       background: #BBB;
       padding: 15px;
       margin-right: 15px;
       width: 180px;
       display: table;
-
-      h3 {
-        font-size: 16px;
-      }
-
-      ul {
-        list-style: none;
-        margin-top: 5px;
-
-        li {
-          line-height: 20px;
-
-          a:extend(.site-link all) {}
-        }
-      }
     }
 
-    .recent-posts {
+    &__sidebar-item-title {
+      font-size: 16px;
+    }
+
+    &__sidebar-item-list {
+      list-style: none;
+      margin-top: 5px;
+    }
+
+    &__sidebar-item-list-item {
+      line-height: 20px;
+
+      a:extend(.site-link all) {}
+    }
+
+    &__sidebar-item--recent-entries {
       margin-bottom: 15px;
     }
-  }
 
-  .next-prev-links {
-    display: flex;
-    flex-direction: row-reverse;
+    &__next-prev-page {
+      flex: 1 100%;
+      order: 3;
+    }
 
-    ul {
+    &__next-prev-page-list {
       display: flex;
+      justify-content: flex-end;
       list-style: none;
 
       li {

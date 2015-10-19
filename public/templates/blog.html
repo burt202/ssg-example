@@ -5,50 +5,106 @@
 {% raw %}{{ widget('blog') }}{% endraw %}
 
 <!-- build:test-content -->
-<div class="blog-container">
-  <div class="blog-entries">
-    <article class="blog-entry">
+<div class="ssg-blog-widget">
+  <div class="ssg-blog-widget__entries">
+    <article class="ssg-blog-widget__entry">
       <header>
-        <h1><a href="example-blog-post-12.html">Example Blog Post 12</a></h1>
-        <p>22nd September 2015</p>
+        <h1>
+          <a class="ssg-blog-widget__entry-link" href="example-blog-post-8.html">Example Blog Post 8</a>
+        </h1>
+        <p class="ssg-blog-widget__entry-date">11th September 2015</p>
       </header>
-      <div class="content">
+      <div class="ssg-blog-widget__entry-content">
         <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vestibulum sit amet felis ligula. Maecenas ac nibh blandit, rhoncus orci ac, lobortis nisl. Curabitur ultricies, dolor sed pharetra dapibus, nisl nisi facilisis dolor, a dictum sem neque nec magna. Pellentesque viverra lectus a enim maximus porttitor. Nulla tincidunt varius venenatis. Nulla efficitur dapibus turpis ac fringilla. Vivamus ultricies libero sapien, quis finibus orci sodales at. Vestibulum sed pellentesque velit. Cras posuere imperdiet nisi non viverra. Proin aliquam lobortis orci vel dictum. Nulla quis suscipit nulla, quis convallis enim. Nullam congue laoreet blandit. Cras dignissim lectus sed vulputate sagittis.</p>
 
         <p>Aliquam ultricies eros purus, luctus dictum orci tristique id. Donec sed auctor tellus. Aliquam sed dui vel metus ornare sodales. Quisque ac viverra tortor. Sed lacinia convallis suscipit. Aliquam condimentum eget orci sed vehicula. Sed bibendum interdum molestie.</p>
+
+        <p>Duis facilisis eleifend tincidunt. Sed fermentum lobortis enim vitae consequat. Donec in semper arcu. In hac habitasse platea dictumst. Aliquam lectus felis, euismod at urna quis, condimentum tincidunt est. Etiam viverra felis ac mattis tincidunt. Fusce non nisi et mi mattis sodales. Nullam tincidunt ipsum dui. Phasellus condimentum felis ex, tincidunt auctor enim lobortis at. Vestibulum ante ipsum primis in faucibus orci luctus et ultrices posuere cubilia Curae; Sed orci turpis, finibus ac sem in, consequat bibendum dolor. Integer ut sem scelerisque, bibendum mauris et, laoreet velit. Sed faucibus vestibulum tortor quis ultricies.</p>
+
+        <p>Morbi feugiat volutpat sodales. Phasellus luctus ultrices auctor. Cras ac molestie ex. Maecenas orci ex, gravida vel turpis id, mollis hendrerit nisl. Nam hendrerit mi eu sapien egestas aliquam. Ut elementum interdum pharetra. Nullam dignissim dolor id eros mattis porttitor. Vivamus hendrerit, sapien sed elementum lobortis, sapien nisi vulputate massa, et viverra lorem erat eget elit. Ut ac magna sagittis, porta leo et, malesuada nisl.</p>
+
+        <p>Pellentesque ornare ex quam, at vulputate ligula tristique dictum. Nunc sagittis risus eget mollis blandit. Integer pulvinar justo et malesuada euismod. Cras sit amet libero et enim hendrerit pulvinar. Nulla eget neque eget diam congue elementum. Pellentesque id luctus nisi. Aliquam in metus hendrerit ex feugiat porttitor a pretium mauris. Quisque in diam et nibh convallis malesuada vel at tellus. Integer ultricies urna quam, at venenatis diam tincidunt nec.</p>
       </div>
     </article>
   </div>
 
-  <div class="sidebar">
-    <div class="recent-posts">
-      <h3>Recent Posts</h3>
-      <ul>
-        <li><a href="example-blog-post-12.html">Example Blog Post 12</a></li>
-        <li><a href="example-blog-post-11.html">Example Blog Post 11</a></li>
-        <li><a href="example-blog-post-10.html">Example Blog Post 10</a></li>
-        <li><a href="example-blog-post-9.html">Example Blog Post 9</a></li>
-        <li><a href="example-blog-post-8.html">Example Blog Post 8</a></li>
+  <div class="ssg-blog-widget__sidebar">
+    <div class="ssg-blog-widget__sidebar-item--recent-entries">
+      <h3 class="ssg-blog-widget__sidebar-item-title">
+        Recent Entries
+      </h3>
+      <ul class="ssg-blog-widget__sidebar-item-list">
+        <li class="ssg-blog-widget__sidebar-item-list-item">
+          <a href="example-blog-post-12.html">
+            Example Blog Post 12
+          </a>
+        </li>
+        <li class="ssg-blog-widget__sidebar-item-list-item">
+          <a href="example-blog-post-11.html">
+            Example Blog Post 11
+          </a>
+        </li>
+        <li class="ssg-blog-widget__sidebar-item-list-item">
+          <a href="example-blog-post-10.html">
+            Example Blog Post 10
+          </a>
+        </li>
+        <li class="ssg-blog-widget__sidebar-item-list-item">
+          <a href="example-blog-post-9.html">
+            Example Blog Post 9
+          </a>
+        </li>
+        <li class="ssg-blog-widget__sidebar-item-list-item">
+          <a href="example-blog-post-8.html">
+            Example Blog Post 8
+          </a>
+        </li>
       </ul>
     </div>
 
-    <div class="archive">
-      <h3>Archive</h3>
-      <ul>
-        <li><a href="september-2015.html">September 2015</a></li>
-        <li><a href="august-2015.html">August 2015</a></li>
-        <li><a href="july-2015.html">July 2015</a></li>
-        <li><a href="june-2015.html">June 2015</a></li>
+    <div class="ssg-blog-widget__sidebar-item--archive">
+      <h3 class="ssg-blog-widget__sidebar-item-title">
+        Archive
+      </h3>
+      <ul class="ssg-blog-widget__sidebar-item-list">
+        <li class="ssg-blog-widget__sidebar-item-list-item">
+          <a href="september-2015.html">
+            September 2015
+          </a>
+        </li>
+        <li class="ssg-blog-widget__sidebar-item-list-item">
+          <a href="august-2015.html">
+            August 2015
+          </a>
+        </li>
+        <li class="ssg-blog-widget__sidebar-item-list-item">
+          <a href="july-2015.html">
+            July 2015
+          </a>
+        </li>
+        <li class="ssg-blog-widget__sidebar-item-list-item">
+          <a href="june-2015.html">
+            June 2015
+          </a>
+        </li>
       </ul>
     </div>
   </div>
-</div>
 
-<div class="next-prev-links">
-  <ul>
-    <li class="next"><a href="blog-page-2.html">Newer Posts</a></li>
-    <li class="prev"><a href="blog-page-3.html">Older Posts</a></li>
-  </ul>
+  <div class="ssg-blog-widget__next-prev-page">
+    <ul class="ssg-blog-widget__next-prev-page-list">
+      <li class="ssg-blog-widget__next-prev-page-list-item--next">
+        <a href="blog.html">
+          Newer Entries
+        </a>
+      </li>
+      <li class="ssg-blog-widget__next-prev-page-list-item--prev">
+        <a href="blog-page-2.html">
+          Older Entries
+        </a>
+      </li>
+    </ul>
+  </div>
 </div>
 <!-- endbuild -->
 
