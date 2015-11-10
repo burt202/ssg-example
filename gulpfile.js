@@ -13,7 +13,7 @@ var swig = require("gulp-swig");
 var data = require("gulp-data");
 var path = require("path");
 var jshint = require("gulp-jshint");
-var htmlreplace = require("gulp-html-replace");
+var removeCode = require('gulp-remove-code');
 var zip = require("gulp-zip");
 
 gulp.task("default", ["build:dev", "watch"]);
@@ -28,6 +28,7 @@ gulp.task("build:dev", function (callback) {
     "copy-assets",
     "copy-manifest",
     "compile-swig",
+    "remove-prod-content",
     "compile-less",
     "webpack:dev",
     callback
@@ -40,7 +41,7 @@ gulp.task("build:prod", function (callback) {
     "copy-assets",
     "copy-manifest",
     "compile-swig",
-    "remove-test-content",
+    "remove-dev-content",
     "compile-less",
     "webpack:prod",
     "zip-dist",
@@ -54,11 +55,15 @@ gulp.task("zip-dist", function () {
     .pipe(gulp.dest("dist"));
 });
 
-gulp.task("remove-test-content", function () {
+gulp.task("remove-prod-content", function () {
   return gulp.src("dist/*.html")
-    .pipe(htmlreplace({
-      "test-content": ""
-    }))
+    .pipe(removeCode({ development: true }))
+    .pipe(gulp.dest("dist"));
+});
+
+gulp.task("remove-dev-content", function () {
+  return gulp.src("dist/*.html")
+    .pipe(removeCode({ production: true }))
     .pipe(gulp.dest("dist"));
 });
 

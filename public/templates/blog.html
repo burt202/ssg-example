@@ -2,9 +2,11 @@
 
 {% block content %}
 
+<!--removeIf(development)-->
 {% raw %}{{ widget('blog') }}{% endraw %}
+<!--endRemoveIf(development)-->
 
-<!-- build:test-content -->
+<!--removeIf(production)-->
 <div class="ssg-blog-widget">
   <div class="ssg-blog-widget__entries">
     <article class="ssg-blog-widget__entry">
@@ -106,6 +108,6 @@
     </ul>
   </div>
 </div>
-<!-- endbuild -->
+<!--endRemoveIf(production)-->
 
 {% endblock %}
