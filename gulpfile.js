@@ -15,6 +15,7 @@ var path = require("path");
 var jshint = require("gulp-jshint");
 var removeCode = require('gulp-remove-code');
 var zip = require("gulp-zip");
+var urlAdjuster = require('gulp-css-url-adjuster');
 
 gulp.task("default", ["build:dev", "watch"]);
 
@@ -114,6 +115,9 @@ gulp.task("compile-less", function () {
   return gulp.src("public/css/imports.less")
     .pipe(less({
       paths: ["public/css/"]
+    }))
+    .pipe(urlAdjuster({
+      replace: ["../assets/", "assets/"],
     }))
     .pipe(rename("combined.css"))
     .pipe(gulp.dest("dist/"))

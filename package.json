@@ -5,6 +5,7 @@
   "devDependencies": {
     "gulp": "^3.9.0",
     "gulp-clean": "^0.3.1",
+    "gulp-css-url-adjuster": "^0.2.3",
     "gulp-data": "^1.2.0",
     "gulp-jshint": "^1.11.2",
     "gulp-less": "^3.0.3",
